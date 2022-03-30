@@ -2,7 +2,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First install all node_modules by running
+`npm install` or `yarn install`
+
+Next, run the development server:
 
 ```bash
 npm run dev
@@ -12,20 +15,16 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Backend Requirements
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+● Users can add transactions for a specific payer and date. The functionality is located in the /api/transactions/addNew.js file
+● A route where users can spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call.
+● Return all payer point balances.
+Note:
+● We are not defining specific requests/responses. Defining these is part of the exercise.
+● We don’t expect you to use any durable data store. Storing transactions in memory is acceptable for the exercise. Used local storage to save data in internal memory
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 

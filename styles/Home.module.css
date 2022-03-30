@@ -85,6 +85,12 @@
   max-width: 300px;
 }
 
+.cardImages {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
 .card:hover,
 .card:focus,
 .card:active {
