@@ -38,6 +38,9 @@ spent. There are two rules for determining what points to "spend" first:
 - Return all payer point balances. </br>
   All payer point balances are calculated using the JS reduce method. Balance is reflected on home page.
   
+## How It Works
+- Click A store to add some rewards points. For the sake of time and simplicity , each click makes a backend call adding 1000 rewards points to the users balance. It passes in a store name depending on the store that is clicked. This data is passed to the backend where it creates a new record with a timestamp. Once the request has been completed the data is stored into local storage. If the store name exist already , it adds the points to that existing store.
+- Once you have rewards points to spend , you can do so by clicking on a item. For simplicity sake , there is a 200 point , 500 point , and 1000 point option. Once clicked , it makes a call to the backend where it sorts through all of the rewards transactions and uses the points with the oldest timestamp first. 
   
 ## Additional Features  
   
