@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First install all node_modules by running
+First, install all node_modules by running
 `npm install` or `yarn install`
 
 Next, run the development server:
@@ -30,7 +30,7 @@ spent. There are two rules for determining what points to "spend" first:
 ## Backend Requirements
 
 - Add transactions for a specific payer and date. </br>
-  Functionality is located in the [AddNew.js](pages/api/transactions/addNew.js) file
+  Functionality is located in the [addNew.js](pages/api/transactions/addNew.js) file
 
 - Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call. </br>
   Functionality is located in the [spendPoints.js](pages/api/transactions/spendPoints.js) file. Once request has completed , and response is received all records are updated to reflect the new existing balance
