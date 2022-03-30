@@ -20,4 +20,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Backend Requirements
 
+- Add transactions for a specific payer and date. </br>
+  Functionality is located in the [AddNew.js](./pages/api/transactions/addNew) file
 
+- Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call. </br>
+  Functionality is located in the [spendPoints.js](./pages/api/transactions/spendPoints.js) file. Once request has completed , and response is received all records are updated to reflect the new existing balance
+  
+- Return all payer point balances. </br>
+  All payer point balances are calculated using the JS reduce method. Balance is reflected on home page.
+  
+  
+## Additional Features  
+  
+- Local storage to persist rewards data
+- Sum up all rewards with same `payer` name
