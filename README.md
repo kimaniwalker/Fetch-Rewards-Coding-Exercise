@@ -30,10 +30,10 @@ spent. There are two rules for determining what points to "spend" first:
 ## Backend Requirements
 
 - Add transactions for a specific payer and date. </br>
-  Functionality is located in the [AddNew.js](/pages/api/transactions/addNew) file
+  Functionality is located in the [AddNew.js](pages/api/transactions/addNew.js) file
 
 - Spend points using the rules above and return a list of { "payer": <string>, "points": <integer> } for each call. </br>
-  Functionality is located in the [spendPoints.js](/pages/api/transactions/spendPoints.js) file. Once request has completed , and response is received all records are updated to reflect the new existing balance
+  Functionality is located in the [spendPoints.js](pages/api/transactions/spendPoints.js) file. Once request has completed , and response is received all records are updated to reflect the new existing balance
   
 - Return all payer point balances. </br>
   All payer point balances are calculated using the JS reduce method. Balance is reflected on home page.
