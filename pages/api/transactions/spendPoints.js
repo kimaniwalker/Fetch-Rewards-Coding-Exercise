@@ -24,6 +24,8 @@ export default function SpendPoints(req, res) {
             balance = newArr.reduce((total, item) => total + item.points, 0)
             console.log('calculating new balance' + balance)
             console.log('calculating Points left' + points)
+        } else if (item.points > balance) {
+            null
         }
         else {
             newArr.push(item)

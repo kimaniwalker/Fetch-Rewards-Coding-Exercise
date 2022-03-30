@@ -90,6 +90,7 @@ export default function Home() {
             <p>Click a store to add 1000 rewards points</p>
             <div className={styles.cardImages}>
 
+            
             <div onClick={() => handleAdd("Edgars")}>
               <Image src={"/Edgars.png"} width={50} height={50} />
             </div>
@@ -113,26 +114,44 @@ export default function Home() {
 
             {transactions && transactions.length >= 1 ?<div className={styles.cardImages}>
 
-            <div onClick={() => handleSpend(200)}>
+            {total < 200 ? null : <div onClick={() => handleSpend(200)}>
               <Image src={"/cupcake.png"} width={50} height={50} />
               <code>200pts</code>
-            </div>
-            <div onClick={() => handleSpend(1000)}> 
+            </div>}
+
+            {total < 1000 ? null :<div onClick={() => handleSpend(1000)}> 
               <Image src={"/sandwich.png"} width={50} height={50} />
               <code>1000pts</code>
-            </div>
-            <div onClick={() => handleSpend(500)}>
+            </div> }
+
+            {total < 500 ? null : <div onClick={() => handleSpend(500)}>
               <Image src={"/coffee.png"} width={50} height={50} />
               <code>500pts</code>
-            </div>
+            </div>}
+            
+            
+            
             
             
             
             </div> : null}
+
             
           </div>
 
           
+            <div className={styles.card}>
+              <h2>My Rewards Info</h2>
+              {transactions && (
+                transactions.map((item) => (
+                  <div key={item.payer}>
+                    <li>{item.payer} - {item.points} - {item.timestamp}</li>
+                    
+                    
+                  </div>
+                ))
+              )}
+            </div>
 
           
         </div>

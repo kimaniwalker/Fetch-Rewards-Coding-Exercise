@@ -43,3 +43,4 @@ spent. There are two rules for determining what points to "spend" first:
   
 - Local storage to persist rewards data
 - Sum up all rewards with same `payer` name
+- Users cannot spend rewards points that they do not have
